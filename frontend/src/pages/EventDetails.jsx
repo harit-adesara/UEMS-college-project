@@ -125,13 +125,13 @@ const EventDetails = () => {
 
         {/* Action Panel */}
         <div style={{ background: 'rgba(0,0,0,0.2)', padding: '1.5rem', borderRadius: '12px', display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          {event.status === 'Accepted' && event.organizedBy !== user?.fullname && !isRegistered && (
+          {event.status === 'Accepted' && event.organizedBy !== user?.fullname && !isRegistered && user?.role === 'Student' && (
             <button onClick={handleRegister} className="btn btn-primary" style={{ padding: '0.75rem 2rem', fontSize: '1.1rem' }}>
               Register Now
             </button>
           )}
 
-          {event.status === 'Accepted' && isRegistered && (
+          {event.status === 'Accepted' && isRegistered && user?.role === 'Student' && (
             <div style={{ textAlign: 'center' }}>
               <div style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', marginBottom: '0.5rem' }}>
                 <span style={{ fontSize: '1.5rem' }}>✓</span>

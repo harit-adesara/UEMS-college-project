@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar animate-fade-in">
-      <Link to="/" className="brand">
+      <Link to={user ? "/dashboard" : "/"} className="brand">
         ✨ UEMS
       </Link>
       <div className="nav-links">

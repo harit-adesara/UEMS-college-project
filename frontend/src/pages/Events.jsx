@@ -161,7 +161,6 @@ const Events = () => {
           >
             <option value="all">Global Directory</option>
             <option value="my">{user?.role === 'Student' ? 'My Registrations' : 'My Hosted Events'}</option>
-            {user?.role !== 'Student' && <option value="registered">My Registrations</option>}
           </select>
 
           {/* Student Specific Filters */}

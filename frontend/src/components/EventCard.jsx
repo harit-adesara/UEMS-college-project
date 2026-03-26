@@ -129,12 +129,12 @@ const EventCard = ({ event, onUpdate, isRegistered }) => {
           View Details
         </button>
 
-        {event.status === 'Accepted' && event.organizedBy !== user?.fullname && !isRegistered && (
+        {event.status === 'Accepted' && event.organizedBy !== user?.fullname && !isRegistered && user?.role === 'Student' && (
           <button onClick={handleRegister} className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
             Register Now
           </button>
         )}
-        {event.status === 'Accepted' && isRegistered && (
+        {event.status === 'Accepted' && isRegistered && user?.role === 'Student' && (
           <button disabled className="btn btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', opacity: 0.7, cursor: 'not-allowed', borderColor: 'var(--success-color)', color: 'var(--success-color)' }}>
             Already Registered
           </button>

@@ -12,6 +12,7 @@ import EventModify from './pages/EventModify';
 import AdminCreateUser from './pages/AdminCreateUser';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './pages/Profile';
+import Landing from './pages/Landing';
 import './App.css';
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/events" element={<ProtectedRoute><Events /></ProtectedRoute>} />
             <Route path="/events/create" element={<ProtectedRoute><EventCreate /></ProtectedRoute>} />
             <Route path="/events/modify/:id" element={<ProtectedRoute><EventModify /></ProtectedRoute>} />

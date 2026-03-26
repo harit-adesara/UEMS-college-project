@@ -55,14 +55,7 @@ const Dashboard = () => {
             theme: 'blue',
             icon: '📊'
           },
-          {
-            title: 'My Registrations',
-            desc: 'View tickets and details for events you are attending.',
-            action: () => navigate('/events?filter=registered'),
-            btnText: 'View Tickets',
-            theme: 'purple',
-            icon: '🎟️'
-          },
+
           {
             title: 'Update Profile',
             desc: 'Keep your personal and organization details up to date.',
@@ -82,14 +75,7 @@ const Dashboard = () => {
             theme: 'purple',
             icon: '🛡️'
           },
-          {
-            title: 'My Registrations',
-            desc: 'View tickets and details for events you are attending.',
-            action: () => navigate('/events?filter=registered'),
-            btnText: 'View Tickets',
-            theme: 'purple',
-            icon: '🎟️'
-          },
+
           {
             title: 'Onboard Organizer',
             desc: 'Create secure accounts for new Teachers or Clubs.',
